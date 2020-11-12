@@ -19,8 +19,9 @@ setInterval(currentTimeNow, 1000);
 // console.log("currentTimeNow: " + currentTimeNow());
 
 //Check for local storage to set value to the object and clearing if currentTime is between 12am and 9am
-if (localStorage.getItem("availableTime")) {
-    availableTime = JSON.parse(localStorage.getItem("availableTime"));
+let getLocal = localStorage.getItem("availableTime");
+if (getLocal) {
+    availableTime = JSON.parse(getLocal);
 } else {
     availableTime = {
         "9": {
@@ -76,11 +77,11 @@ for (let hour = 9; hour < 18; hour++) {
             </div>
 
         <!-- schedule -->
-            <div class="col-sm col-md-10 d-flex description">
+            <div class="col-sm col-md-10 d-flex p-0 description">
             <div class="input-group">
                 <textarea class="form-control text-area"></textarea>
                 <div class="input-group-append">
-                <button class="saveBtn d-flex justify-center align-center">
+                <button class="saveBtn d-flex justify-content-center align-items-center">
                     <i class="far fa-save fa-2x save-icon"></i>
                 </button>
                 </div>
@@ -99,8 +100,9 @@ for (let hour = 9; hour < 18; hour++) {
 }
 
 //Checking time to determine present, past, or future
-$.each($('.time-block'), function(index, value) {
-    let eventInput = Number($(value).attr("data-time"));    
+$.each($(".time-block"), function(index, value) {
+    let eventInput = parseInt($(value).attr("data-time"));    
+    // $(this refers to the $("time-block")
     if (eventInput == currentTime) {
         $(this).find("textarea").addClass("present");
     } 
@@ -110,13 +112,41 @@ $.each($('.time-block'), function(index, value) {
     else {
         $(this).find("textarea").addClass("future");
     }
-    console.log("currentTime: "+ parseInt(currentTime));
+    // console.log("currentTime: "+ parseInt(currentTime));
+    // console.log( "this:" + $(this));
 })
 
+// A lot of console.log to check for values and typeof 
 // parseInt() for string --> number, apparently Number() and parseInt does the same thing.
 // console.log("moment().hour(): " + Number(moment().hour()) + " " + typeof Number(moment().hour()));
 // console.log("moment().hour(): " + parseInt(moment().hour()) + " " + typeof parseInt(moment().hour()));
 
 // console.log(currentTime);
 
+//set value of availableTime to equal the user input for each row
+$(".time-block").each(function() {
+    // $(this refers to the $("time-block")
+    $(this).find(".text-area").val(availableTime[$(this).attr("data-time")].value);
+    
+    // console.log( "this:" + $(this));
 
+});
+
+// //save value to local storage on click
+$(".saveBtn").on("click", function(event){
+    event.preventDefault();
+
+    //set availableTime time attribute by looking for the closest class of 'time-block' and ignoring other classes.
+    // $(this) refers to the .savebtn
+    var timeValue = $(this).closest(".time-block").attr("data-time");
+
+    //set availableTime value attribute by looking for the closest class of 'time-block' and ignoring other classes.
+    var textValue = $(this).closest(".time-block").find(".text-area").val();
+    availableTime[timeValue].value = textValue;
+
+    //save user input in each object to local storage
+    localStorage.setItem("availableTime", JSON.stringify(availableTime));
+
+    // console.log( "this:" + $(this));
+
+});

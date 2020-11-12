@@ -1,7 +1,8 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: #B37FwhiteA7;
 }
 
 textarea{
@@ -15,10 +16,26 @@ textarea{
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
-  color: black;
+  /* background-color: transparent; */
+  color: rgb(255, 255, 255);
   border-radius: 0;
-  border-bottom: 10px solid black;
+  /* border-bottom: 10px solid black; */
+
+  /* my styles */
+  transition: 1s;
+  font-size: bold;
+  background-image: url(../images/bg.jpg);
+  background-position: top;
+  background-repeat: none;
+}
+.jumbotron:hover {
+  background-position: bottom;
+  transition: 3s;
+}
+.jumbotron:hover .display-3,
+.jumbotron:hover p {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
 }
 
 .description{
@@ -33,15 +50,23 @@ textarea{
 .row {
   white-space: pre-wrap;
   height: auto;
-  border-top: 1px solid white;
+  /* border-top: 1px solid white; */
   /* My styles */
   text-transform: uppercase;
+  transition: .5s;
+  margin: 10px;
 }
-
+.row:hover {
+  -webkit-box-shadow: 5px 7px 22px -3px rgba(0,0,0,0.9); 
+  box-shadow: 5px 7px 22px -3px rgba(56, 43, 43, 0.9);
+  transition: .5s;
+}
 .hour {
   background-color: #ffffff;
   color: #000000;
-  border-top: 1px dashed #000000;
+  /* border-top: 1px dashed #000000; */
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .past {
@@ -63,12 +88,15 @@ textarea{
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06AED5;
+  background-color: #1bd5ff;
   color: white;
   
   /* My styles */
   transition: .5s;
   cursor: pointer;
+  border: none;
+  padding: 10px;
+  font-size: 10px;
 }
 
 .saveBtn:hover {
@@ -76,4 +104,26 @@ textarea{
   background-color: rgba(0,0,0,.5);
   transition: .5s;
   cursor: pointer;
+  color: #1bd5ff;
+}
+
+/* My styles */
+footer {
+  background: #000000;
+  padding: 32px;
+  margin-top: 48px;
+  text-align: center;
+}
+
+.container {
+  padding: 32px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 16px;
+  -webkit-box-shadow: 5px 7px 22px -3px rgba(0,0,0,0.9); 
+  box-shadow: 5px 7px 22px -3px rgba(56, 43, 43, 0.9);
+  transition: .5s;
+}
+.container:hover {
+  box-shadow: none;
+  transition: .5s;
 }
