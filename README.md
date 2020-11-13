@@ -84,7 +84,7 @@ containerEl.append(`
 These are websites I used to aid me in learning different syntax and different methods, functions, etc for Javascript.
 
 > - [Developer Mozilla](https://developer.mozilla.org/en-US/) || Learn a good amount of methods and functions here.
-> - [W3School](https://www.w3schools.com/) || I pulled some questions fro the JavaScript quiz there and some questions I replaced with my own answers.
+> - [W3School](https://www.w3schools.com/) || jQuery Methods and uses were referenced here.
 > - [StackOverflow](https://www.stackoverflow.com/) || Most issues I had were resolved from looking at other people's problems.
 > - [HackerThemes](https://hackerthemes.com/bootstrap-cheatsheet/) || Used this as a guide for the styling on the template literal with Bootstrap Classes.
 > - [Momentjscom](https://momentjscom.readthedocs.io/en/latest/moment/04-displaying/01-format/) || Used this as a guide for how moment format works
