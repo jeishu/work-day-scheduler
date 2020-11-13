@@ -26,7 +26,8 @@ textarea{
   font-size: bold;
   background-image: url(../images/bg.jpg);
   background-position: top;
-  background-repeat: none;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .jumbotron:hover {
   background-position: bottom;
