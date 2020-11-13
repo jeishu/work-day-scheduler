@@ -123,8 +123,41 @@ footer {
   -webkit-box-shadow: 5px 7px 22px -3px rgba(0,0,0,0.9); 
   box-shadow: 5px 7px 22px -3px rgba(56, 43, 43, 0.9);
   transition: .5s;
+
+  margin-top: 16px;
+  margin-bottom: 32px;
 }
 .container:hover {
+  box-shadow: none;
+  transition: .5s;
+}
+
+.btnWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.clearBtn {
+  cursor: pointer;
+
+  margin: 16px;
+  padding: 16px;
+  text-align: center;
+
+  border-radius: 16px;
+  
+  width: 10%;
+
+  background-color: white;
+  box-shadow: 5px 7px 22px -3px rgba(56, 43, 43, 0.9);
+  transition: .5s;
+}
+
+.clearBtn:hover {
+  cursor: pointer;
+  background-color: white;
   box-shadow: none;
   transition: .5s;
 }

@@ -24,7 +24,7 @@ This application is intended to organize a person's daily work life with simple 
 - [x] Can edit each time block to according to what the user wants as the event.
 - [x] Can save your event into the local storage.
 - [x] The event will persist even when the user refreshes the page.
-- [] Will have a button that clears out your schedule.
+- [x] Will have a button that clears out your schedule.
 - [] Disable buttons after it passes the current time.
 
 

@@ -150,3 +150,12 @@ $(".saveBtn").on("click", function(event){
     // console.log( "this:" + $(this));
 
 });
+
+// Clears the saved input thast in the lcoal storage and refreshes the input area
+function clearSchedule(){
+    localStorage.removeItem("availableTime");
+    location.reload();
+}
+let clearBtnEl = $(".clearBtn");
+clearBtnEl.on("click", clearSchedule);
+
