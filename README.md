@@ -30,8 +30,8 @@ This application is intended to organize a person's daily work life with simple 
 
 ## Links
 
-* [Project Repo: Work Day Scheduler](https://github.com/jeishu/work-day-scheduler)
-* [GitHub Page: Work Day Scheduler](https://jeishu.github.io/work-day-scheduler/)
+* Project Repo: [Repository](https://github.com/jeishu/work-day-scheduler)
+* GitHub Page: [Website](https://jeishu.github.io/work-day-scheduler/)
 
 ## Screenshots
 
