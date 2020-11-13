@@ -36,7 +36,7 @@ This application is intended to organize a person's daily work life with simple 
 
 Nothing here yet.
 
-![Nothing Here](./images/homepage.png)
+![Nothing Here](./assets/images/testgif.gif)
 
 
 ## Language
