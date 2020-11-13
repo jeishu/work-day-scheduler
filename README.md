@@ -51,7 +51,32 @@ Nothing here yet.
 
 ## Code-Example
 
-Nothing here yet.
+I used template literals to append the content from JS to HTML. A For Loop was used to create 8 of these from 9AM to 5PM.
+Notice I also use ${} in the template literals to grab values from JS. And you can see Bootstrap Classes are also used within the code.
+```
+containerEl.append(`
+        
+        <div class="row time-block" data-time="${hour}">
+
+        <!-- hours -->
+            <div class="col-sm col-md-2 hour">
+            <p>${moment({hour}).format("h  a")}</p>
+            </div>
+
+        <!-- schedule -->
+            <div class="col-sm col-md-10 d-flex p-0 description">
+            <div class="input-group">
+                <textarea class="form-control text-area"></textarea>
+                <div class="input-group-append">
+                <button class="saveBtn d-flex justify-content-center align-items-center">
+                    <i class="far fa-save fa-2x save-icon"></i>
+                </button>
+                </div>
+            </div>
+            </div>
+        </div>
+        `);
+```
 
 ## Reference
 
@@ -72,11 +97,17 @@ These websites aid me in creating this README.
 
 ## Tests/Issues/Notes
 
-Nothing here yet.
+* Had some issues getting the colors to show present, past and future, but turns out that I forgot that future color is green. So me working at night got the color confused and spent several hours fixing something that was already working correctly
+* Syntax errors again... Less code problem, more me problem. I tend to type too fast and misspell class names and or IDs. (」°ロ°)」
+* Main errors is figure out how $(this) works. I was using the actual $("") selector rather than $(this). So figuring out $(this) is a life saver. Spent a good 2 days learning it.
+* I utilized Bootstrap class for some CSS-ing and as well as my own CSS overriding some of it. The Bootstrap class CSS was used in the template Literals.
+* I also commented out the pre-exsisting CSS and replace with my own.
+* I used template literals with backticks to create and render the amount of time needed into the HTML. Each render was done with a for loop and ${} notion inside the template literals. I was very proud of this. (´ ∀ ` *) 
+* Console log, console log. I console logged almost everything to check values, typeof variables, functions etc.
 
 ## Contribute/Credits
 
-> - [html-css-js.com](https://html-css-js.com/css/generator/box-shadow/) || Help me generator easy box shadows.
+> - [html-css-js](https://html-css-js.com/css/generator/box-shadow/) || Help me generator easy box shadows.
 
 ## License
 

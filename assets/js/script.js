@@ -67,7 +67,7 @@ if (getLocal) {
 for (let hour = 9; hour < 18; hour++) {
 
     // started the for loop at 9 so the data-time can be set starting at 9 then renders up to 17 (5PM)
-    $(".container").append(`
+    containerEl.append(`
         
         <div class="row time-block" data-time="${hour}">
 
